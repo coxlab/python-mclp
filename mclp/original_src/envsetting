@@ -1,0 +1,1 @@
+setenv LD_LIBRARY_PATH /agbs/cluster/nowozin/opt/mosek-5.0.0.105/tools/platform/linux64x86/:/agbs/cluster/pgehler/opt/boost/lib:/agbs/cluster/nowozin/opt/coin-osi-0.98/lib:/agbs/cluster/nowozin/opt/mosek-5.0.0.105/tools/platform/linux64x86/bin

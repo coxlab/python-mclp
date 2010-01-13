@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+# dummy script which adds the variables to 
+#
+# export LD_LIBRARY_PATH=/scratch_net/biwidl07/software/mosek/5/tools/platform/linux64x86/bin:/agbs/cluster/pgehler/opt/boost/lib:/agbs/cluster/nowozin/opt/coin-osi-0.98/lib:/agbs/share/sw/matlab/bin/glnxa64
+
+export MSKDIR=/scratch_net/biwidl07/opt/mosek/5/tools/platform/linux64x86/bin
+export BOOSTDIR=/scratch_net/biwidl07/opt/boost-1.39.0/lib
+export OSIDIR=/scratch_net/biwidl07/opt/coin-Osi-0.100.1/lib
+export CLPDIR=/scratch_net/biwidl07/opt/coin-Clp-1.10/lib
+export MATLABDIR=/usr/pack/matlab-7.8r2009a-sd/bin/glnxa64
+export MOSEKLM_LICENSE_FILE=/scratch_net/biwidl07/opt/mosek/5/licenses/mosek.lic
+export LIBC=/usr/pack/gcc-4.4.1-sd/amd64-debian-linux4.0/lib
+
+export LD_LIBRARY_PATH=$MSKDIR:$BOOSTDIR:$OSIDIR:$MATLABDIR:$CLPDIR:$LIBC
+
+
+
+/scratch_net/biwidl07/projects/caltech/code/mclp/mclp $*
