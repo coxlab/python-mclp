@@ -1,5 +1,5 @@
 On Ubuntu 9.10 (Karmi):
 
-sudo apt-get install -y coinor-libclp-dev coinor-libosi-dev coinor-libcoinutils-dev
+sudo apt-get install -y coinor-libclp-dev coinor-libosi-dev coinor-libcoinutils-dev libboost-python1.38.0 libboost-python1.38-dev
 
 

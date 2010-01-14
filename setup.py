@@ -14,6 +14,7 @@ coin_libs = ["Clp", "CoinUtils", "Osi", "OsiClp"]
 
 LIB_DIRS = []
 BOOST_PYTHON_LIBRARY = "boost_python"
+BOOST_INCLUDE_PATH = os.environ.get('BOOST_INCLUDE_PATH', '/usr/include/boost')
 COIN_INCLUDE_PATH = os.environ.get('COIN_INCLUDE_PATH', '/usr/include/coin')
 
 for suffix in boost_suffixes_to_try:    
@@ -22,7 +23,6 @@ for suffix in boost_suffixes_to_try:
         BOOST_PYTHON_LIBRARY = candidate_name
         LIB_DIRS.append(library_path(candidate_name))
         break
-
 
 for coin_lib in coin_libs:
     if has_library(coin_lib):
@@ -45,6 +45,7 @@ setup(name='mclp',
                   ['mclp/LPBoostPythonWrapper.cpp', 'mclp/original_src/LPBoostMulticlassClassifier.cpp'], 
                   libraries = [BOOST_PYTHON_LIBRARY, 'Clp', 'CoinUtils', 'Osi', 'OsiClp'],
                   library_dirs = LIB_DIRS,
-                  include_dirs = ['mclp/original_src', COIN_INCLUDE_PATH])
+                  include_dirs = ['mclp/original_src', COIN_INCLUDE_PATH, BOOST_INCLUDE_PATH],
+                  )
         ],
       )
