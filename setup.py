@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import os
+
 from setuptools import setup, find_packages, Extension
 from setup_helper import *
 
@@ -9,7 +11,7 @@ coin_libs = ["Clp", "CoinUtils", "Osi", "OsiClp"]
 
 LIB_DIRS = []
 BOOST_PYTHON_LIBRARY = "boost_python"
-COIN_INCLUDE_PATH = '/usr/local/include/coin'
+COIN_INCLUDE_PATH = os.environ.get('COIN_INCLUDE_PATH', '/usr/include/coin')
 
 for suffix in boost_suffixes_to_try:    
     candidate_name = "boost_python" + suffix

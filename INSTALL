@@ -1,0 +1,5 @@
+On Ubuntu 9.10 (Karmi):
+
+sudo apt-get install -y coinor-libclp-dev coinor-libosi-dev coinor-libcoinutils-dev
+
+
